@@ -1,0 +1,105 @@
+import { jameswilson } from '@/authors'
+import foldersImage from './folders.jpg'
+import datapointsImage from './datapoints.jpg'
+import addressableImage from './addressable.jpg'
+import dashboardImage from './dashboard.jpg'
+
+export const meta = {
+  title: 'Week in review',
+  description: `This week we’re excited to release our very first, ‘Week in review’. The week in review will be posted weekly on our product blog to ensure that everyone involved or interested in what we’re building at rulebox  are aware of the progress made and what’s in the pipeline for the coming weeks.`,
+  date: '2021-08-12T18:05:31Z',
+  authors: [jameswilson],
+  image: dashboardImage,
+  footer: `
+    <p>
+      Interested in finding out more?
+      <a href="https://rulebox.io/contact" class="font-medium text-violet-600 hover:text-violet-700">
+        Contact us →
+      </a>
+    </p>
+  `,
+}
+
+This week we’re excited to release our very first, ‘Week in review’. The week in review will be posted weekly on our product blog to ensure that everyone involved or interested in what we’re building at rulebox are aware of the progress made and what’s in the pipeline for the coming weeks.
+
+Moving forward we plan to create a product roadmap for both [PDFx](https://harnessdata.ai/product/pdfx) and [ADDRESSABLE](https://harnessdata.ai/product/addressable) to keep us honest and true.
+
+<!--more-->
+
+## What to expect in the week in review
+
+The week in review will be a high level summary of all things attempted, achieved and released. It’s a super informal way of updating anyone that is interested about developments within the tech team.
+
+## What’s been worked on
+
+### PDFx
+
+We have started work on upgrading our admin dashboard. The feedback from clients over the past couple of weeks has been invaluable in helping us to plan and scope out this project. Whilst it’s only in the design phase at present we hope that this will have a real benefit on clients being able to achieve everything that they need within the platform.
+
+<img src={dashboardImage} alt="" />
+<figcaption className="italic">A mockup of the user dashboard within PDFx.</figcaption>
+
+We’ve also continued to work on tidying up a few elements of PDFx including the settings pop-up modal and the datapoint drag and drop aesthetics.
+
+<img src={datapointsImage} alt="" />
+<figcaption className="italic">A screenshot of the PDFx datapoint selection screen.</figcaption>
+
+Whilst Folders were scheduled to be released as part of the upcoming 'canary' release we appreciated the benefit that folders will have to our users. For that reason we are implementing them on the current version of PDFx to ensure that they can be used immediately. Folders will be available to select clients in the coming weeks.
+
+<a href="https://harnessdata.ai/product/pdfx">
+  <img src={foldersImage} alt="PDFx Folders Screenshot" />
+</a>
+<figcaption className="italic">
+  A screenshot of the PDFx folders showing on the user dashboard.
+</figcaption>
+
+### Addressable
+
+As we continue to ingest more data and understand connections further we have started to utilise MapReduce and GraphQL to ensure that subscribers can query the data more efficiently.
+
+We have also added some of our PPSM data to the Addressable UI so that graphs and charts can easily be created & viewed for the respective search area.
+
+<img src={addressableImage} alt="" />
+<figcaption className="italic">
+  A screenshot of the internal graphics for London Bridge Street Price Per Square Metre for Flat
+  sales dating back to 1995.
+</figcaption>
+
+We’re also in the process of finalising our latest ADDRESSABLE marketing video to help people who work with UK Address data to better understand how ADDRESSABLE allows them to better utilise the data that they already have using address connections.
+
+---
+
+## What’s been released
+
+### Microsoft Connector - PDFx
+
+Although not officially announced (yet) the Microsoft Connector for PDFx was released to the Microsoft Marketplace. The announcement was published in the [July Updates | Power Automate Blog](https://powerautomateweb.microsoft.com/en-us/blog/july-updates-on-power-automate-partner-connectors/)
+
+> rulebox PDFx is a SaaS platform, automating the extraction of data from the most complex and varied PDFs in the commercial real estate and financial services industry. Streamline your processes and drive business decisions by utilizing the PDFx platform and workflow tools. The PDFx connector adds deep systems integration, allowing PDFs to be stripped, connected, and processed by PDFx directly from a range of triggers such as incoming emails, Azure blob storage events, and many others supported by the Azure automation platform.
+
+The Microsoft Connector allows clients to fully integrate PDFx into their workflow without the need for bespoke API integrations. The Microsoft Connector allows clients to integrate with e-mail, Dropbox, Slack etc. The full list can be found here [List of all Power Apps connectors | Microsoft Docs](https://docs.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors). The Microsoft PDFx Connector was built as part of our commitment to ensure that extracting key decision making data from PDF documents is as seamless as possible. By plugging in to your pre-existing apps / services PDFx is capable of processing and having that data structured for you in a matter of seconds.
+
+### Product Blog
+
+We’ve released our product blog! This blog will solely be for tech / product updates and will provide the tech team to write down their thoughts, challenges and accomplishments for all to read.
+
+---
+
+## What’s coming up
+
+### PDFx
+
+We’ve released the latest extraction training algorithms to our UAT environment. This will be published to all clients using PDFx alongside their respective personal training improvements based on the data that they have processed. The training update predominantly improves the following datapoints.
+
+|                         |                           |                         |
+| ----------------------- | ------------------------- | ----------------------- |
+| Address extraction      | Asking Price              | Asset type              |
+| Asset Use Class         | BREEAM Rating             | Capital Value Per Sq Ft |
+| Document Type           | Energy Performance Rating | Grade Of Space          |
+| Internal Ceiling Height | Lease Start Date          | Lease teams             |
+| Lease type              | Length of lease           | Long Lease Length       |
+| Measurement Practice    | Measurement Standard      | Purchasers Costs        |
+| Rateable Value          | Rental Income Per Annum   | Rental Income Per Sq Ft |
+| Rental Value            | Site Area (Acres)         | Sizing - AreaSqFt       |
+
+We’ve also added a new sort ordering to PDFx SaaS to improve usability based on client requests.
