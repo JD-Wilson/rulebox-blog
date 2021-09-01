@@ -24,7 +24,7 @@ export default function Home() {
               <meta name="twitter:site" content="@Rulebox_io" />
               <meta name="twitter:creator" content="@Rulebox_io" />
               <meta name="twitter:title" content="Rulebox.io Blog" />
-              <meta name="twitter:description" content="News content from the rulebox mteam." />
+              <meta name="twitter:description" content="News content from the rulebox team." />
               <meta name="twitter:image" content={`https://rulebox.io${twitterCard}`} />
               <meta property="og:url" content="https://rulebox.io/blog" />
               <meta property="og:type" content="article" />
