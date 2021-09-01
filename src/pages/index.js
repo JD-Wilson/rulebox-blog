@@ -47,7 +47,7 @@ export default function Home() {
             <ul className="pt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
-                  <li key={link} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-2xl my-2">
+                  <li key={link} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-2xl my-2 border border-violet-200 border-opacity-75">
                     <div className="flex-shrink-0" id="image">
                 {/* src={post.imageUrl} */}
                 <img className="h-48 w-full object-cover" src={meta.image} alt="" />
@@ -56,11 +56,11 @@ export default function Home() {
                 <div className="flex-1">
                   <Link href={link}>
                     <a
-                      className="block mt-2 overflow-ellipsis overflow-hidden h-52"
+                      className="block mt-2 overflow-ellipsis overflow-hidden h-40"
                       aria-label={`Read "${meta.title}"`}
                     >
-                    <p className="text-xl font-semibold text-violet-700">{meta.title}</p>
-                    <p className="mt-3 text-base text-gray-500"><Component /></p>
+                    <p className="min-h-8 max-h-8 h-8 text-lg font-semibold leading-4 text-violet-700">{meta.title}</p>
+                    <p className="mt-3 text-base text-gray-500 line-clamp-4"><Component /></p>
                     </a>
                   </Link>
                 </div>
