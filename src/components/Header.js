@@ -31,15 +31,15 @@ export default function Header() {
         <Link href="/">
           <a aria-label="Rulebox.io Blog">
             <div>
-              <img className="h-8 md:h-12 w-full object-cover" src={logo} alt="" />
+              <img className="h-auto md:h-12 md:w-full w-28 object-cover" src={logo} alt="" />
             </div>
           </a>
         </Link>
       </div>
-      <div className="text-base leading-5">
+      <div className="hidden sm:inline-block text-base md:leading-5">
         <a
           href="https://rulebox.io"
-          className="font-medium text-violet-500 hover:text-violet-800"
+          className="md:font-medium text-violet-500 hover:text-violet-800 font-sm"
         >
           Find out more about Rulebox &rarr;
         </a>

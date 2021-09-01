@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Futility-friendly-transitions-with-tailwindui-react","\u002Fintroducing-tailwind-play","\u002Fheadless-ui-v1-4"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
