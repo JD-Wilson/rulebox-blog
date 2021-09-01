@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="antialiased">
+    <div className="antialiased bg-violet-50 pb-12">
       <Head>
         {/* Google Analytics */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99332063-3"></script>

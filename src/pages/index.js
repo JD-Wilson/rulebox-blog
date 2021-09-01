@@ -18,7 +18,7 @@ export default function Home() {
       </SectionContainer>
       <SectionContainer>
         <main>
-          <div className="divide-y mb-12">
+          <div className="divide-y">
             <Head>
               <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:site" content="@Rulebox_io" />
@@ -34,7 +34,7 @@ export default function Home() {
               <title>Rulebox.io Blog</title>
               <meta name="description" content="News content from the rulebox team." />
             </Head>
-            <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+            <div className="py-6 space-y-2 md:space-y-5">
               <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[3rem] md:leading-[3.5rem]">
                  Latest updates
               </h1>
