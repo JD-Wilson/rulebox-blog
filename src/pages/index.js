@@ -47,7 +47,7 @@ export default function Home() {
             <ul className="pt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
-                  <li key={link} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-2xl my-2 border border-violet-200 border-opacity-75">
+                  <li key={link} className="flex flex-col rounded-lg overflow-hidden hover:shadow-md my-2 border border-violet-200 border-opacity-75">
                     <div className="flex-shrink-0" id="image">
                 {/* src={post.imageUrl} */}
                 <img className="h-48 w-full object-cover" src={meta.image} alt="" />
