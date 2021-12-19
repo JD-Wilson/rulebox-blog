@@ -17,7 +17,7 @@ export default function Header() {
         "
       ></div>
     </div>
-    {/* <div class="absolute w-full flex justify-center">
+    <div class="absolute w-full flex justify-center">
       <svg class="circles" viewBox="0 0 1800 1800">
         <circle
           stroke="white"
@@ -68,7 +68,7 @@ export default function Header() {
           r="875"
         />
       </svg>
-    </div> */}
+    </div>
 
     <header
       class="relative flex justify-between max-w-7xl ml-auto mr-auto py-8"

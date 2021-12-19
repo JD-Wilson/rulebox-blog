@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MDXProvider } from '@mdx-js/react'
 import Header, { RuleboxMark } from '@/components/Header'
+import Footer from '@/components/Footer'
 import SectionContainer from '@/components/SectionContainer'
 import smallCard from '@/img/twitter-card-small.jpg'
 
@@ -100,7 +101,7 @@ export default function Post({ meta, children, posts }) {
                 </div>
               </header>
               <div className="mt-12">
-                <div className="prose prose-slate mx-auto text-gray-500">
+                <div className="prose prose-red mx-auto text-gray-500">
                   <MDXProvider>{children}</MDXProvider>
                 </div>
               </div>
@@ -188,10 +189,10 @@ export default function Post({ meta, children, posts }) {
                   <MDXProvider>{children}</MDXProvider>
                 </div>
                 {meta.footer && (
-                  <div className="pt-6 pb-16" dangerouslySetInnerHTML={{ __html: meta.footer }} />
+                  <div className="pt-6" dangerouslySetInnerHTML={{ __html: meta.footer }} />
                 )}
                 {!meta.footer && meta.discussion && (
-                  <div className="pt-6 pb-16">
+                  <div className="pt-6">
                     <p>
                       Want to talk about this post?{' '}
                       <a
@@ -243,6 +244,7 @@ export default function Post({ meta, children, posts }) {
           </article>
         </main>
       </SectionContainer>
+      <Footer />
     </>
   )
 }
