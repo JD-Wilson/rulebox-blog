@@ -13,12 +13,10 @@ const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 export default function Home() {
   return (
     <>
-      <SectionContainer>
         <Header />
-      </SectionContainer>
       <SectionContainer>
         <main>
-          <div className="divide-y">
+          <div className="">
             <Head>
               <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:site" content="@Rulebox_io" />
@@ -34,11 +32,11 @@ export default function Home() {
               <title>Rulebox.io Blog</title>
               <meta name="description" content="News content from the rulebox team." />
             </Head>
-            <div className="py-6 space-y-2 md:space-y-5">
-              <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[3rem] md:leading-[3.5rem]">
+            <div className="text-center mt-12">
+              <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">
                  Latest updates
               </h1>
-              <p className="text-lg text-gray-500">
+              <p className="mt-3 max-w-3xl mx-auto text-xl text-white sm:mt-4">
                 The latest product news, straight from the Rulebox development team.
               </p>
             </div>
@@ -47,20 +45,20 @@ export default function Home() {
             <ul className="pt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
-                  <li key={link} className="flex flex-col rounded-lg overflow-hidden hover:shadow-md my-2 border border-violet-200 border-opacity-75">
+                  <li key={link} className="flex flex-col rounded-lg overflow-hidden hover:shadow-md my-2 border border-gray-700 border-opacity-75">
                     <div className="flex-shrink-0" id="image">
                 {/* src={post.imageUrl} */}
                 <img className="h-48 w-full object-cover" src={meta.image} alt="" />
               </div>
-              <div className="flex-1 bg-white p-6 flex flex-col justify-between" id="summary">
+              <div className="flex-1 bg-grey-800 p-6 flex flex-col justify-between" id="summary">
                 <div className="flex-1">
                   <Link href={link}>
                     <a
                       className="block mt-2 overflow-ellipsis overflow-hidden h-40"
                       aria-label={`Read "${meta.title}"`}
                     >
-                    <p className="min-h-8 max-h-8 h-8 text-lg font-semibold leading-4 text-violet-700">{meta.title}</p>
-                    <p className="mt-3 text-base text-gray-500 line-clamp-4"><Component /></p>
+                    <p className="min-h-8 max-h-8 h-8 text-lg font-semibold leading-4 text-gray-200">{meta.title}</p>
+                    <p className="mt-3 text-base text-gray-300 line-clamp-4"><Component /></p>
                     </a>
                   </Link>
                 </div>
@@ -76,15 +74,15 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-violet-800">
+                    <p className="text-sm font-medium text-gray-800">
                       <a className="">
                         {meta.authors.map((author) => (
                             <dl className="text-sm font-medium whitespace-no-wrap">
                               <dt className="sr-only">Author Name</dt>
-                              <dd className="text-violet-500">
+                              <dd className="text-gray-500">
                                 <a
                               href={`https://twitter.com/${author.twitter}`}
-                              className="text-violet-600 hover:text-violet-700"
+                              className="text-gray-600 hover:text-gray-700"
                             >
                               by {author.name}
                             </a>

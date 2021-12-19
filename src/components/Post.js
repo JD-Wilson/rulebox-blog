@@ -58,7 +58,7 @@ export default function Post({ meta, children, posts }) {
                     <Link href="/">
                       <a className="inline-flex">
                         <span className="sr-only">All posts</span>
-                        <RuleboxMark className="h-12 w-12" />
+                        <p>Rulebox</p>
                       </a>
                     </Link>
                   </div>
@@ -73,7 +73,7 @@ export default function Post({ meta, children, posts }) {
                     </div>
                   </dl>
                   <div className="mt-1">
-                    <h1 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
+                    <h1 className="text-2xl leading-8 font-extrabold text-gray-200 tracking-tight sm:text-3xl sm:leading-9">
                       {meta.title.replace(/ ([^ ]+)$/, '\u00A0$1')}
                     </h1>
                   </div>
@@ -86,7 +86,7 @@ export default function Post({ meta, children, posts }) {
                             <img src={author.avatar} alt="" className="w-8 h-8 rounded-full" />
                             <dl className="text-sm font-medium whitespace-no-wrap">
                               <dt className="sr-only">Name</dt>
-                              <dd className="text-gray-900">
+                              <dd className="text-gray-200">
                                 <a href={`https://twitter.com/${author.twitter}`} className="hover:underline">
                                   {post.author.name}
                                 </a>
@@ -100,7 +100,7 @@ export default function Post({ meta, children, posts }) {
                 </div>
               </header>
               <div className="mt-12">
-                <div className="prose mx-auto">
+                <div className="prose prose-slate mx-auto text-gray-500">
                   <MDXProvider>{children}</MDXProvider>
                 </div>
               </div>
@@ -117,9 +117,7 @@ export default function Post({ meta, children, posts }) {
 
   return (
     <>
-      <SectionContainer>
         <Header />
-      </SectionContainer>
       <SectionContainer>
         <main>
           <article className="xl:divide-y xl:divide-gray-200">
@@ -169,12 +167,12 @@ export default function Post({ meta, children, posts }) {
                         <img src={author.avatar} alt="" className="w-12 h-12 rounded-full" />
                         <dl className="text-sm font-medium whitespace-no-wrap">
                           <dt className="sr-only">Author Name</dt>
-                          <dd className="text-gray-900">{author.name}</dd>
+                          <dd className="text-gray-200">{author.name}</dd>
                           <dt className="sr-only">Twitter</dt>
                           <dd>
                             <a
                               href={`https://twitter.com/${author.twitter}`}
-                              className="text-violet-600 hover:text-violet-700"
+                              className="text-gray-500 hover:text-gray-700"
                             >
                               @{author.twitter}
                             </a>
@@ -198,7 +196,7 @@ export default function Post({ meta, children, posts }) {
                       Want to talk about this post?{' '}
                       <a
                         href={meta.discussion}
-                        className="font-medium text-violet-600 hover:text-violet-700"
+                        className="font-medium text-gray-600 hover:text-gray-700"
                       >
                         Discuss this on GitHub &rarr;
                       </a>
@@ -214,7 +212,7 @@ export default function Post({ meta, children, posts }) {
                         <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
                           Next Article
                         </h2>
-                        <div className="text-violet-600 hover:text-violet-700">
+                        <div className="text-gray-600 hover:text-gray-700">
                           <Link href={next.link}>
                             <a>{next.title}</a>
                           </Link>
@@ -226,7 +224,7 @@ export default function Post({ meta, children, posts }) {
                         <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
                           Previous Article
                         </h2>
-                        <div className="text-violet-600 hover:text-violet-700">
+                        <div className="text-gray-600 hover:text-gray-700">
                           <Link href={previous.link}>
                             <a>{previous.title}</a>
                           </Link>
@@ -237,7 +235,7 @@ export default function Post({ meta, children, posts }) {
                 )}
                 <div className="pt-8">
                   <Link href="/">
-                    <a className="text-violet-600 hover:text-violet-700">&larr; Back to the blog</a>
+                    <a className="text-gray-600 hover:text-gray-700">&larr; Back to the blog</a>
                   </Link>
                 </div>
               </footer>

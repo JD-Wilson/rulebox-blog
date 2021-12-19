@@ -28,6 +28,11 @@ module.exports = {
           '800': '#301a5b',
           '900': '#1b1736',
         },
+        hero: {
+          '100': '#FFB900',
+          '500': '#FF469C',
+          '900': '#011AFF',
+        },
         teal: colors.cyan,
         // for syntax highlighting
         fuchsia: colors.fuchsia,
