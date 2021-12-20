@@ -101,7 +101,7 @@ export default function Post({ meta, children, posts }) {
                 </div>
               </header>
               <div className="mt-12">
-                <div className="prose prose-red mx-auto text-gray-500">
+                <div className="mx-auto text-white">
                   <MDXProvider>{children}</MDXProvider>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function Post({ meta, children, posts }) {
                 </dd>
               </dl>
               <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
-                <div className="max-w-none pt-10 pb-8">
+                <div className="prose max-w-none pt-10 pb-8">
                   <MDXProvider>{children}</MDXProvider>
                 </div>
                 {meta.footer && (
@@ -197,7 +197,7 @@ export default function Post({ meta, children, posts }) {
                       Want to talk about this post?{' '}
                       <a
                         href={meta.discussion}
-                        className="font-medium text-gray-600 hover:text-gray-700"
+                        className="font-medium text-white hover:text-gray-600"
                       >
                         Discuss this on GitHub &rarr;
                       </a>
@@ -213,7 +213,7 @@ export default function Post({ meta, children, posts }) {
                         <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
                           Next Article
                         </h2>
-                        <div className="text-gray-600 hover:text-gray-700">
+                        <div className="text-white hover:text-gray-700">
                           <Link href={next.link}>
                             <a>{next.title}</a>
                           </Link>
@@ -225,7 +225,7 @@ export default function Post({ meta, children, posts }) {
                         <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
                           Previous Article
                         </h2>
-                        <div className="text-gray-600 hover:text-gray-700">
+                        <div className="text-white hover:text-gray-700">
                           <Link href={previous.link}>
                             <a>{previous.title}</a>
                           </Link>
@@ -236,7 +236,7 @@ export default function Post({ meta, children, posts }) {
                 )}
                 <div className="pt-8">
                   <Link href="/">
-                    <a className="text-gray-600 hover:text-gray-700">&larr; Back to the blog</a>
+                    <a className="text-white hover:text-gray-600">&larr; Back to the blog</a>
                   </Link>
                 </div>
               </footer>

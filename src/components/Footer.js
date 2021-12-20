@@ -64,7 +64,7 @@ export default function Footer() {
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a href={item.href} className="text-base text-gray-200 hover:text-gray-400">
+              <a href={item.href} className="text-base text-white hover:text-gray-600">
                 {item.name}
               </a>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
         </nav>
         <div className="mt-4 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-300 hover:text-gray-400">
+            <a key={item.name} href={item.href} className="text-white hover:text-gray-600">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>

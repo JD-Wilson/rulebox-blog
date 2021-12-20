@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div>
-    <div class="absolute w-full flex h-32">
+    <div className="">
+    <div className="absolute w-full flex h-32">
       <div
-        class="
+        className="
           w-full
           flex-grow
           bg-gradient-to-r
@@ -17,8 +17,8 @@ export default function Header() {
         "
       ></div>
     </div>
-    <div class="absolute w-full flex justify-center">
-      <svg class="circles" viewBox="0 0 1800 1800">
+    {/* <div className="w-3/4 flex fixed bottom-5 left-5 justify-center">
+      <svg className="circles" viewBox="0 0 1800 1800">
         <circle
           stroke="white"
           fill="none"
@@ -68,21 +68,23 @@ export default function Header() {
           r="875"
         />
       </svg>
-    </div>
+    </div> */}
 
     <header
-      class="relative flex justify-between max-w-7xl ml-auto mr-auto py-8"
+      className="relative flex justify-between max-w-7xl ml-auto mr-auto py-8"
     >
-      <span class="text-white text-xl font-bold flex items-center">
+      <Link href="/">
+      <span className="text-white text-xl font-bold flex items-center cursor-pointer">
         Rulebox
       </span>
-      <span class="flex items-center space-x-12">
-        <span class="text-white text-sm">Changelog</span>
-        <span class="text-white text-sm">About us</span>
-        <span class="text-white text-sm">We're hiring</span>
+      </Link>
+      <span className="flex items-center space-x-12">
+        <span className="text-white text-sm">Changelog</span>
+        <span className="text-white text-sm">About us</span>
+        <span className="text-white text-sm">We're hiring</span>
       </span>
       <button
-        class="
+        className="
           text-white
           py-1
           px-6

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import getAllPostPreviews from '@/getAllPostPreviews'
 import twitterCard from '@/img/logo.jpg'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import SectionContainer from '@/components/SectionContainer'
 
 const posts = getAllPostPreviews()
@@ -33,82 +34,104 @@ export default function Home() {
               <meta name="description" content="News content from the rulebox team." />
             </Head>
             <div className="text-center mt-12">
-              <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">
+              <h1 className="text-3xl font-extrabold text-white tracking-wide sm:text-5xl">
                  Latest updates
               </h1>
               <p className="mt-3 max-w-3xl mx-auto text-xl text-white sm:mt-4">
-                The latest product news, straight from the Rulebox development team.
+                The latest product news, straight from the Rulebox team.
               </p>
             </div>
 
             {/* Start of new */}
-            <ul className="pt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            <div className="mt-8 max-w-5xl mx-auto grid gap-5 xl:grid-cols-3 sm:grid-cols-2 lg:max-w-none pt-4 transform">
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
-                  <li key={link} className="flex flex-col rounded-lg overflow-hidden hover:shadow-md my-2 border border-gray-700 border-opacity-75">
-                    <div className="flex-shrink-0" id="image">
-                {/* src={post.imageUrl} */}
-                <img className="h-48 w-full object-cover" src={meta.image} alt="" />
-              </div>
-              <div className="flex-1 bg-grey-800 p-6 flex flex-col justify-between" id="summary">
-                <div className="flex-1">
-                  <Link href={link}>
-                    <a
-                      className="block mt-2 overflow-ellipsis overflow-hidden h-40"
-                      aria-label={`Read "${meta.title}"`}
-                    >
-                    <p className="min-h-8 max-h-8 h-8 text-lg font-semibold leading-4 text-gray-200">{meta.title}</p>
-                    <p className="mt-3 text-base text-gray-300 line-clamp-4"><Component /></p>
-                    </a>
-                  </Link>
-                </div>
-                <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <a>
-                      {meta.authors.map((author) => (
-                        <div>
-                          <span className="sr-only">Author Name</span>
-                          <img className="h-10 w-10 rounded-full" src={author.avatar} alt="" />
+                  <div key={link} className="">
+                    <Link href={link}>
+                      <a
+                        className="text-white hover:text-gray-700"
+                        aria-label={`Read "${meta.title}"`}
+                      >
+                        <div className="flex flex-col rounded-lg shadow-md overflow-hidden hover:shadow-lg bg-black border border-gray-700">
+                          <div className="flex-shrink-0">
+                            <div className="h-48 w-full object-cover">
+                              <img
+                                src={meta.image}
+                                alt=""
+                                className="h-48 w-full object-cover"
+                              />
+                            </div>
+                            <div className="flex-1 bg-black p-6 flex flex-col justify-between">
+                              <div className="flex-1">
+                                <div className="block">
+                                  <a href="#" className="text-xl font-semibold text-white line-clamp-1">
+                                    {meta.title.replace(/ ([^ ]+)$/, '\u00A0$1')}
+                                  </a>
+                                </div>
+                                <p className="mt-3 text-base text-white line-clamp-4">
+                                  <Component />
+                                </p>
+                                
+                                <div className="mt-6 md:flex items-center hidden">
+                                  <div className="flex-shrink-0">
+                                    <a>
+                                      {meta.authors.map((author) => (
+                                        <div>
+                                          <span className="sr-only">Author Name</span>
+                                          <a href={`https://twitter.com/${author.twitter}`}>
+                                            <img
+                                              className="h-10 w-10 rounded-full"
+                                              src={author.avatar}
+                                              alt=""
+                                            />
+                                          </a>
+                                        </div>
+                                      ))}
+                                    </a>
+                                  </div>
+                                  <div className="ml-3">
+                                    <p className="text-sm font-medium text-gray-600">
+                                      <a className="">
+                                        {meta.authors.map((author) => (
+                                          <dl className="text-sm font-medium whitespace-no-wrap">
+                                            <dt className="sr-only">Author Name</dt>
+                                            <dd className="text-gray-500">
+                                              <p
+                                                className="text-white"
+                                              >
+                                                by {author.name}
+                                              </p>
+                                            </dd>
+                                          </dl>
+                                        ))}
+                                      </a>
+                                    </p>
+                                    <div className="flex space-x-1 text-sm text-gray-600">
+                                      <time dateTime={meta.date}>
+                                        {postDateTemplate.render(new Date(meta.date))}
+                                      </time>
+                                      <span aria-hidden="true">&middot;</span>
+                                      <span> {meta.readtime} </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      ))}
-                    </a>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-800">
-                      <a className="">
-                        {meta.authors.map((author) => (
-                            <dl className="text-sm font-medium whitespace-no-wrap">
-                              <dt className="sr-only">Author Name</dt>
-                              <dd className="text-gray-500">
-                                <a
-                              href={`https://twitter.com/${author.twitter}`}
-                              className="text-gray-600 hover:text-gray-700"
-                            >
-                              by {author.name}
-                            </a>
-                                </dd>
-                            </dl>
-                        ))}
                       </a>
-                    </p>
-                    <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={meta.date}>
-                            {postDateTemplate.render(new Date(meta.date))}
-                          </time>
-                    </div>
+                    </Link>
                   </div>
-                </div>
-              </div>
-                  </li>
                 )
               })}
-            </ul>
+            </div>
             {/* End of new */}
 
 
           </div>
         </main>
       </SectionContainer>
+      <Footer />
     </>
   )
 }
