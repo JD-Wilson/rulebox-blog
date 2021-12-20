@@ -23,7 +23,7 @@ export default function Home() {
               <meta name="twitter:site" content="@Rulebox_io" />
               <meta name="twitter:creator" content="@Rulebox_io" />
               <meta name="twitter:title" content="Rulebox.io Blog" />
-              <meta name="twitter:description" content="News content from the rulebox team." />
+              <meta name="twitter:description" content="News content from the Rulebox team." />
               <meta name="twitter:image" content={`https://rulebox.io${twitterCard}`} />
               <meta property="og:url" content="https://rulebox.io/blog" />
               <meta property="og:type" content="article" />
@@ -31,7 +31,7 @@ export default function Home() {
               <meta property="og:description" content="News content from the rulebox team." />
               <meta property="og:image" content={`https://rulebox.io/blog${twitterCard}`} />
               <title>Rulebox.io Blog</title>
-              <meta name="description" content="News content from the rulebox team." />
+              <meta name="description" content="News content from the Rulebox team." />
             </Head>
             <div className="text-center mt-12">
               <h1 className="text-3xl font-extrabold text-white tracking-wide sm:text-5xl">
@@ -41,9 +41,13 @@ export default function Home() {
                 The latest product news, straight from the Rulebox team.
               </p>
             </div>
+    <div className="max-w-3xl mx-auto xl:max-w-5xl">
+            
+    </div>
 
             {/* Start of new */}
             <div className="mt-8 max-w-5xl mx-auto grid gap-5 xl:grid-cols-3 sm:grid-cols-2 lg:max-w-none pt-4 transform">
+              
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
                   <div key={link} className="">

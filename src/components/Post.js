@@ -29,24 +29,15 @@ export default function Post({ meta, children, posts }) {
                 {meta.image ? (
                   <>
                     <meta name="twitter:card" content="summary_large_image" />
-                    <meta
-                      name="twitter:image"
-                      content={`https://rulebox.io${meta.image}`}
-                    />
+                    <meta name="twitter:image" content={`https://rulebox.io${meta.image}`} />
                   </>
                 ) : (
                   <>
                     <meta name="twitter:card" content="summary" />
-                    <meta
-                      name="twitter:image"
-                      content={`https://rulebox.io${smallCard}`}
-                    />
+                    <meta name="twitter:image" content={`https://rulebox.io${smallCard}`} />
                   </>
                 )}
-                <meta
-                  property="og:url"
-                  content={`https://rulebox.io${router.pathname}`}
-                />
+                <meta property="og:url" content={`https://rulebox.io${router.pathname}`} />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`${meta.title} | Rulebox.io`} />
                 <meta property="og:description" content={meta.description} />
@@ -88,7 +79,10 @@ export default function Post({ meta, children, posts }) {
                             <dl className="text-sm font-medium whitespace-no-wrap">
                               <dt className="sr-only">Name</dt>
                               <dd className="text-gray-200">
-                                <a href={`https://twitter.com/${author.twitter}`} className="hover:underline">
+                                <a
+                                  href={`https://twitter.com/${author.twitter}`}
+                                  className="hover:underline"
+                                >
                                   {post.author.name}
                                 </a>
                               </dd>
@@ -118,21 +112,21 @@ export default function Post({ meta, children, posts }) {
 
   return (
     <>
-        <Header />
+      <Header />
       <SectionContainer>
         <main>
-          <article className="xl:divide-y xl:divide-gray-200">
+          <article className="relative xl:divide-y xl:divide-white">
             <Head>
-              <title>{meta.title} | rulebox.io</title>
+              <title>{meta.title} | Rulebox.io</title>
               <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:site" content="@Rulebox_io" />
               <meta name="twitter:creator" content="@Rulebox_io" />
-              <meta name="twitter:title" content={`${meta.title} | rulebox`} />
+              <meta name="twitter:title" content={`${meta.title} | Rulebox`} />
               <meta name="twitter:description" content={meta.description} />
               <meta name="twitter:image" content={`https://rulebox.io/blog${meta.image}`} />
               <meta property="og:url" content={`https://rulebox.io/blog${router.pathname}`} />
               <meta property="og:type" content="article" />
-              <meta property="og:title" content={`${meta.title} | rulebox  Data Intelligence`} />
+              <meta property="og:title" content={`${meta.title} | Rulebox.io`} />
               <meta property="og:description" content={meta.description} />
               <meta property="og:image" content={`https://rulebox.io/blog${meta.image}`} />
               <meta name="description" content={meta.description}></meta>
@@ -152,7 +146,6 @@ export default function Post({ meta, children, posts }) {
                     </dd>
                   </div>
                 </dl>
-                
               </div>
             </header>
             <div
