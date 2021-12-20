@@ -53,7 +53,7 @@ export default function Home() {
                         aria-label={`Read "${meta.title}"`}
                       >
                         <div className="flex flex-col rounded-lg shadow-md overflow-hidden hover:shadow-lg bg-black border border-gray-700">
-                          <div className="flex-shrink-0">
+                          <div className="shrink grow-0">
                             <div className="h-48 w-full object-cover">
                               <img
                                 src={meta.image}
