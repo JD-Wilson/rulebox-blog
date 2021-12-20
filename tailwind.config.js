@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         violet: {
-          '50':  '#f9fafb',
+          '50': '#f9fafb',
           '100': '#edf1fb',
           '200': '#d8daf6',
           '300': '#b4b6e8',
@@ -43,19 +43,18 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.gray.200'),
             h2: {
-              fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.800'),
+              color: theme('colors.gray.500'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.500'),
             },
             h4: {
               fontWeight: '500',
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.500'),
             },
             'ol li:before': {
               fontWeight: '600',
@@ -65,10 +64,10 @@ module.exports = {
               backgroundColor: theme('colors.gray.400'),
             },
             code: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.300'),
             },
             a: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.300'),
               fontWeight: 400,
             },
             pre: {
@@ -76,7 +75,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             blockquote: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.500'),
               borderLeftColor: theme('colors.gray.200'),
             },
           },
@@ -88,9 +87,10 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
-    function ({ addBase }) {
-      addBase([
-        {
+    function ({
+      addBase
+    }) {
+      addBase([{
           '@font-face': {
             fontFamily: 'Inter var',
             fontWeight: '100 900',

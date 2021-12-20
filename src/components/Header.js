@@ -28,13 +28,13 @@ export default function Header() {
         </svg>
       </div>
 
-      <header className="relative flex justify-between max-w-7xl ml-auto mr-auto py-8">
+      <header className="relative flex justify-between xl:max-w-5xl md:max-w-3xl ml-auto mr-auto py-8 px-4 lg:px-0">
         <Link href="/">
           <span className="text-white text-xl font-bold flex items-center cursor-pointer">
             Rulebox
           </span>
         </Link>
-        <span className="flex items-center space-x-12">
+        <span className="sm:flex items-center space-x-12 hidden">
           <span className="text-white text-sm">Changelog</span>
           <span className="text-white text-sm">About us</span>
           <span className="text-white text-sm">We're hiring</span>
