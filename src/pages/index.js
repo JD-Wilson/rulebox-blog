@@ -33,7 +33,7 @@ export default function Home() {
               <title>Rulebox.io Blog</title>
               <meta name="description" content="News content from the Rulebox team." />
             </Head>
-            <div className="text-center mt-12">
+            <div className="relative text-center mt-12">
               <h1 className="text-3xl font-extrabold text-white tracking-wide sm:text-5xl">
                 Latest updates
               </h1>

@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Untitled Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         violet: {
@@ -92,22 +92,32 @@ module.exports = {
     }) {
       addBase([{
           '@font-face': {
-            fontFamily: 'Inter var',
+            fontFamily: 'Untitled Sans',
             fontWeight: '100 900',
             fontStyle: 'normal',
             fontNamedInstance: 'Regular',
             fontDisplay: 'swap',
-            src: 'url("/fonts/Inter-roman.var-latin.woff2?3.13") format("woff2")',
+            src: 'url("/fonts/UntitledSans-Regular.woff2?3.13") format("woff2")',
           },
         },
         {
           '@font-face': {
-            fontFamily: 'Inter var',
+            fontFamily: 'Untitled Sans',
             fontWeight: '100 900',
             fontStyle: 'italic',
             fontNamedInstance: 'Italic',
             fontDisplay: 'swap',
-            src: 'url("/fonts/Inter-italic.var-latin.woff2?3.13") format("woff2")',
+            src: 'url("/fonts/UntitledSans-RegularItalic.woff2?3.13") format("woff2")',
+          },
+        },
+        {
+          '@font-face': {
+            fontFamily: 'Untitled Sans',
+            fontWeight: '100 900',
+            fontStyle: 'bold',
+            fontNamedInstance: 'Bold',
+            fontDisplay: 'swap',
+            src: 'url("/fonts/UntitledSans-Bold.woff2?3.13") format("woff2")',
           },
         },
       ])
