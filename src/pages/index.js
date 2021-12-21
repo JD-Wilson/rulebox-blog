@@ -14,7 +14,7 @@ const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 export default function Home() {
   return (
     <>
-        <Header />
+      <Header />
       <SectionContainer>
         <main>
           <div className="">
@@ -35,19 +35,16 @@ export default function Home() {
             </Head>
             <div className="text-center mt-12">
               <h1 className="text-3xl font-extrabold text-white tracking-wide sm:text-5xl">
-                 Latest updates
+                Latest updates
               </h1>
               <p className="mt-3 max-w-3xl mx-auto text-xl text-white sm:mt-4">
                 The latest product news, straight from the Rulebox team.
               </p>
             </div>
-    <div className="max-w-3xl mx-auto xl:max-w-5xl">
-            
-    </div>
+            <div className="max-w-3xl mx-auto xl:max-w-5xl"></div>
 
             {/* Start of new */}
             <div className="mt-8 max-w-5xl mx-auto grid gap-5 xl:grid-cols-3 sm:grid-cols-2 lg:max-w-none pt-4 transform">
-              
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (
                   <div key={link} className="">
@@ -56,26 +53,25 @@ export default function Home() {
                         className="text-white hover:text-gray-700"
                         aria-label={`Read "${meta.title}"`}
                       >
-                        <div className="flex flex-col rounded-lg shadow-md overflow-hidden hover:shadow-lg bg-black border border-gray-700">
+                        <div className="flex flex-col rounded-lg shadow-md overflow-hidden hover:shadow-lg bg-black border border-gray-700 transition ease-in-out delay-75 hover:-translate-y-1 duration-150">
                           <div className="shrink grow-0">
                             <div className="h-48 w-full object-cover">
-                              <img
-                                src={meta.image}
-                                alt=""
-                                className="h-48 w-full object-cover"
-                              />
+                              <img src={meta.image} alt="" className="h-48 w-full object-cover" />
                             </div>
                             <div className="flex-1 bg-black p-6 flex flex-col justify-between">
                               <div className="flex-1">
                                 <div className="block">
-                                  <a href="#" className="text-xl font-semibold text-white line-clamp-1">
+                                  <a
+                                    href="#"
+                                    className="text-xl font-semibold text-white line-clamp-1"
+                                  >
                                     {meta.title.replace(/ ([^ ]+)$/, '\u00A0$1')}
                                   </a>
                                 </div>
                                 <p className="mt-3 text-base text-white line-clamp-4">
                                   <Component />
                                 </p>
-                                
+
                                 <div className="mt-6 md:flex items-center hidden">
                                   <div className="flex-shrink-0">
                                     <a>
@@ -100,11 +96,7 @@ export default function Home() {
                                           <dl className="text-sm font-medium whitespace-no-wrap">
                                             <dt className="sr-only">Author Name</dt>
                                             <dd className="text-gray-500">
-                                              <p
-                                                className="text-white"
-                                              >
-                                                by {author.name}
-                                              </p>
+                                              <p className="text-white">by {author.name}</p>
                                             </dd>
                                           </dl>
                                         ))}
@@ -130,8 +122,6 @@ export default function Home() {
               })}
             </div>
             {/* End of new */}
-
-
           </div>
         </main>
       </SectionContainer>

@@ -46,28 +46,28 @@ module.exports = {
             color: theme('colors.gray.200'),
             h2: {
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.200'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.200'),
             },
             h4: {
               fontWeight: '500',
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.200'),
             },
             'ol li:before': {
               fontWeight: '600',
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.200'),
             },
             'ul li:before': {
-              backgroundColor: theme('colors.gray.400'),
+              backgroundColor: theme('colors.gray.200'),
             },
             code: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.200'),
             },
             a: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.200'),
               fontWeight: 400,
             },
             pre: {
@@ -75,7 +75,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             blockquote: {
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.200'),
               borderLeftColor: theme('colors.gray.200'),
             },
           },

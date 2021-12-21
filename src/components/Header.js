@@ -19,12 +19,12 @@ export default function Header() {
       </div>
       <div className="absolute justify-center h-full w-full inset bottom-32 lg:bottom-52 mx-auto">
         <svg className="max-w-3xl mx-auto xl:max-w-5xl" viewBox="0 0 1800 1800">
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="250" />
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="375" />
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="500" />
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="625" />
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="750" />
-          <circle stroke="white" fill="none" stroke-opacity="0.2" cx="900" cy="900" r="875" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="250" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="375" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="500" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="625" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="750" />
+          <circle stroke="white" fill="none" strokeOpacity="0.2" cx="900" cy="900" r="875" />
         </svg>
       </div>
 
