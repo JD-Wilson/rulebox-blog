@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Untitled Sans', ...defaultTheme.fontFamily.sans],
+        rulebox: ['Untitled Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         violet: {

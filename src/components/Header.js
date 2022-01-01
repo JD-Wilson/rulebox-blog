@@ -34,7 +34,7 @@ export default function Header() {
             Rulebox
           </span>
         </Link>
-        <span className="sm:flex items-center space-x-12 hidden">
+        <span className="font-sans sm:flex items-center space-x-12 hidden">
           <span className="text-white text-sm">Changelog</span>
           <span className="text-white text-sm">About us</span>
           <span className="text-white text-sm">We're hiring</span>

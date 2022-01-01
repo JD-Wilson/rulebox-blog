@@ -1,22 +1,12 @@
 import '@/css/tailwind.css'
 import Head from 'next/head'
+import PlausibleProvider from "next-plausible";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="antialiased bg-black pb-12">
+    <div className="pb-12 antialiased bg-black">
       <Head>
-        {/* Google Analytics */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99332063-3"></script>
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'UA-99332063-3');`
-            }}
-          /> */}
+        < script defer data - domain = "rulebox.io" src = "https://plausible.io/js/plausible.js" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <meta name="theme-color" content="#ffffff" />
@@ -24,7 +14,7 @@ export default function App({ Component, pageProps }) {
         <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/atom.xml" />
         <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json" />
       </Head>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </div>
   )
 }
