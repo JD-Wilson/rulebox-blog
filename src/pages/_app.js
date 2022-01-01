@@ -1,12 +1,12 @@
 import '@/css/tailwind.css'
 import Head from 'next/head'
-import PlausibleProvider from "next-plausible";
+import script from 'next/script'
 
 export default function App({ Component, pageProps }) {
   return (
     <div className="pb-12 antialiased bg-black">
       <Head>
-        < script defer data - domain = "rulebox.io" src = "https://plausible.io/js/plausible.js" />
+        <script defer data - domain = "rulebox.io" src = "https://plausible.io/js/plausible.js"></script>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <meta name="theme-color" content="#ffffff" />
