@@ -1,6 +1,5 @@
 import '@/css/tailwind.css'
 import Head from 'next/head'
-import script from 'next/script'
 
 export default function App({ Component, pageProps }) {
   return (
