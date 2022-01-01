@@ -43,7 +43,6 @@ export default function Home() {
             </div>
             <div className="max-w-3xl mx-auto xl:max-w-5xl"></div>
 
-            {/* Start of new */}
             <div className="mt-8 max-w-5xl mx-auto grid gap-5 xl:grid-cols-3 sm:grid-cols-2 lg:max-w-none pt-4 transform">
               {posts.map(({ link, module: { default: Component, meta } }) => {
                 return (

@@ -57,7 +57,7 @@ export default function Post({ meta, children, posts }) {
                   <dl className="mt-4 space-y-10">
                     <div>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium text-gray-500">
+                      <dd className="text-base font-medium text-gray-400">
                         <time dateTime={meta.date}>
                           {postDateTemplate.render(new Date(meta.date))}
                         </time>
@@ -139,7 +139,7 @@ export default function Post({ meta, children, posts }) {
                 <dl className="space-y-10">
                   <div>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="text-base leading-6 font-medium text-gray-500">
+                    <dd className="text-base leading-6 font-medium text-gray-400">
                       <time dateTime={meta.date}>
                         {postDateTemplate.render(new Date(meta.date))}
                       </time>
@@ -149,7 +149,7 @@ export default function Post({ meta, children, posts }) {
               </div>
             </header>
             <div
-              className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:gap-x-6 pb-16 xl:pb-20"
+              className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:gap-x-6 pb-12 xl:pb-8"
               style={{ gridTemplateRows: 'auto 1fr' }}
             >
               <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
@@ -166,7 +166,7 @@ export default function Post({ meta, children, posts }) {
                           <dd>
                             <a
                               href={`https://twitter.com/${author.twitter}`}
-                              className="text-gray-500 hover:text-gray-700"
+                              className="text-gray-400 hover:text-gray-300"
                             >
                               @{author.twitter}
                             </a>
@@ -203,7 +203,7 @@ export default function Post({ meta, children, posts }) {
                   <div className="space-y-8 py-8">
                     {next && (
                       <div>
-                        <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
+                        <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-400">
                           Next Article
                         </h2>
                         <div className="text-white hover:text-gray-700">
@@ -215,7 +215,7 @@ export default function Post({ meta, children, posts }) {
                     )}
                     {previous && (
                       <div>
-                        <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-500">
+                        <h2 className="text-xs leading-5 tracking-wide uppercase text-gray-400">
                           Previous Article
                         </h2>
                         <div className="text-white hover:text-gray-700">

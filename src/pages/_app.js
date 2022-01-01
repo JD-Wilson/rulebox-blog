@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="pb-12 antialiased bg-black">
+    <div className="lg:pb-4 pb-8 antialiased bg-black">
       <Head>
         < script
         async
