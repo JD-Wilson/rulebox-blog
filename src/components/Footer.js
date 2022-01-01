@@ -2,10 +2,9 @@ import Link from 'next/link'
 
 const navigation = {
   main: [
-    { name: 'About', href: 'https://rulebox.io/about' },
-    { name: 'Jobs', href: 'https://careers.rulebox.io/' },
-    { name: 'News', href: 'https://rulebox.io/news' },
-    { name: 'Contact', href: 'https://rulebox.io/contact' },
+    { name: 'Home', href: 'https://rulebox.io/' },
+    { name: 'Blog', href: 'https://blog.rulebox.io/' },
+    { name: 'Contact', href: 'mailto:accounts@rulebox.io' },
   ],
   social: [
     {
@@ -22,15 +21,15 @@ const navigation = {
 
 export default function Footer() {
   return (
-      <div className=" divide-y divide-gray-500">
+      <div className="divide-y divide-gray-500 ">
         <section className="bg-black">
-      <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
+      <div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
         <div className="lg:w-0 lg:flex-1">
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-4xl" id="newsletter-headline">
-            Want to be kept up to date?
+            Beta Access
           </h2>
-          <p className="mt-3 max-w-2xl text-lg leading-6 text-gray-200">
-            Sign up for our newsletter and you'll receive updates, straight to your inbox.
+          <p className="max-w-2xl mt-3 text-lg leading-6 text-gray-200">
+            Rulebox is launching soon.Sign up for early access to the latest features and releases.
           </p>
         </div>
         <div className="mt-8 lg:mt-0 lg:ml-8">
@@ -38,20 +37,10 @@ export default function Footer() {
               <label htmlFor="mce-EMAIL" className="sr-only">
                 Email address
               </label>
-                <a href="#" target="_blank" className="text-white
-          py-1
-          px-6
-          border
-          text-sm
-          rounded-full
-          bg-white bg-opacity-10
-          border-opacity-50">Register for updates</a>
+                <a href="https://rulebox.io" target="_blank" className="px-6 py-1 text-sm text-white bg-white border border-opacity-50 rounded-full bg-opacity-10">Register for access &rarr;</a>
             </form>
-          <p className="mt-3 text-sm text-gray-400 max-w-sm">
-            We care about the protection of your data. Read our{' '}
-            <a href="#" className="text-gray-400 font-medium underline">
-              Privacy Policy.
-            </a>
+          <p className="max-w-sm mt-3 text-sm text-gray-400">
+            We care about the protection of your data. We will never share your email address with anyone else.
           </p>
         </div>
       </div>
@@ -60,8 +49,8 @@ export default function Footer() {
 
         
     <footer className="bg-black">
-      <div className="py-6 overflow-hidden lg:px-8 max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
-        <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      <div className="max-w-3xl px-4 py-6 mx-auto overflow-hidden lg:px-8 sm:px-6 xl:max-w-5xl xl:px-0">
+        <nav className="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
               <a href={item.href} className="text-base text-white hover:text-gray-600">
@@ -70,15 +59,15 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-4 flex justify-center space-x-6">
+        <div className="flex justify-center mt-4 space-x-6">
           {navigation.social.map((item) => (
             <a key={item.name} href={item.href} className="text-white hover:text-gray-600">
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="w-6 h-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-4 text-center text-base text-gray-400">&copy; Rulebox.io</p>
+        <p className="mt-4 text-base text-center text-gray-400">&copy; Rulebox.io</p>
       </div>
     </footer>
     </div>
